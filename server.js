@@ -1,4 +1,6 @@
-const io = require("socket.io")(app);
+var app = require('http').createServer(handler)
+var io = require('socket.io')(app);
+var fs = require('fs');
 const { initGame, gameLoop, getUpdatedVelocity } = require('./game');
 const { FRAME_RATE } = require('./constants');
 const { makeid } = require('./utils');
